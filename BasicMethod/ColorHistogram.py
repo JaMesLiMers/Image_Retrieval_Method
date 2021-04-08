@@ -34,7 +34,7 @@ class ColorHistogram():
   
         Args:
             input (numpy.ndarray)
-                image in form of numpy.ndarray
+                image in form of numpy.ndarray, Image shape should be [height, width, channel].
         Return
             h_type == 'global'
                 a numpy array with size n_bin ** channel
@@ -75,10 +75,8 @@ class ColorHistogram():
         """ Count hist for every bins
 
         Input example:
-            [
-                [256, 0,]
-                [128, 0,]
-            ]
+            [[256, 0,]
+            [128, 0,]]
             
         Output example: (with n_bin = 4, bins = [0, 128, 256], channel = 1)
             [2. 2. 0. 0.]
